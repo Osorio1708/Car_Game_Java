@@ -1,0 +1,17 @@
+CREATE DATABASE sofkacar
+
+CREATE TABLE `player` (
+  `idPlayer` varchar(10) NOT NULL,
+  `namePlayer` varchar(10) DEFAULT NULL,
+  `numFirst` int(6) DEFAULT NULL,
+  `numSec` int(6) DEFAULT NULL,
+  `numTrd` int(6) DEFAULT NULL
+) 
+
+CREATE TABLE `podium` (
+  `codPodium` int(6) NOT NULL,
+  `date` datetime DEFAULT NULL,
+  `firstPlace` varchar(10) DEFAULT NULL,
+  `secondPlace` varchar(10) DEFAULT NULL,
+  `thirdPlace` varchar(10) DEFAULT NULL
+) 
