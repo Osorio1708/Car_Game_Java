@@ -135,14 +135,6 @@ public class RegisterPlayer extends javax.swing.JPanel {
         cleanTxt();
     }//GEN-LAST:event_btnRegisterActionPerformed
 
-    private void txtNamePlayerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamePlayerActionPerformed
-      
-       
-    }//GEN-LAST:event_txtNamePlayerActionPerformed
-
-    private void txtIdPlayerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdPlayerActionPerformed
-       
-    }//GEN-LAST:event_txtIdPlayerActionPerformed
 
     public void cleanTxt(){
         txtIdPlayer.setText("");
