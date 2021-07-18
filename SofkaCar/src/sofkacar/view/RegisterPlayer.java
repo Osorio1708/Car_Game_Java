@@ -56,11 +56,7 @@ public class RegisterPlayer extends javax.swing.JPanel {
         txtNamePlayer.setFont(new java.awt.Font("Comic Sans MS", 2, 18)); // NOI18N
         txtNamePlayer.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtNamePlayer.setToolTipText("");
-        txtNamePlayer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNamePlayerActionPerformed(evt);
-            }
-        });
+        );
 
         jLabel2.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -72,11 +68,7 @@ public class RegisterPlayer extends javax.swing.JPanel {
 
         txtIdPlayer.setFont(new java.awt.Font("Comic Sans MS", 2, 18)); // NOI18N
         txtIdPlayer.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtIdPlayer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtIdPlayerActionPerformed(evt);
-            }
-        });
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
