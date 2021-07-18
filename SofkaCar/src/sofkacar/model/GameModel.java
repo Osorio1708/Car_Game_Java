@@ -122,6 +122,12 @@ public class GameModel {
         }
         return false;
     }
+    
+    public void podiumPresentation(){
+        message(((Driver)podium.get(0)).presentation() + "1");
+        message(((Driver)podium.get(1)).presentation() + "2");
+        message(((Driver)podium.get(2)).presentation() + "3");
+    }
 
     public boolean gameOver() {
         return this.podium.size() == this.numPlayers;

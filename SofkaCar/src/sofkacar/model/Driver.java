@@ -20,5 +20,11 @@ public class Driver extends Player {
     public void setPlayerCar(Car playerCar) {
         this.playerCar = playerCar;
     }
-
+    
+    @Override
+    public String presentation(){
+        return "Name: " + this.name + "\n" +
+               "Lane: " + this.playerCar.getLaneNumber() + "\n" +
+               "Position: ";      
+    }
 }

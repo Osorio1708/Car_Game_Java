@@ -1,6 +1,5 @@
 
 package sofkacar.view;
-
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 import sofkacar.model.GameModel;
@@ -151,6 +150,8 @@ public class Game extends javax.swing.JPanel {
         }else{
             gm.message("Game Over");
             btnEndGame.setEnabled(true);
+            btnPlay.setEnabled(false);
+            gm.podiumPresentation();
         }
         
     }//GEN-LAST:event_btnPlayActionPerformed

@@ -60,5 +60,12 @@ public class Player {
     public void setThirdPosition(int thirdPosition) {
         this.thirdPosition = thirdPosition;
     }
+    
+    public String presentation(){
+        return "Name: " + this.name + "\n" +
+               "First Score: " + this.firstPosition + "\n" +
+               "Second Score: " + this.secondPosition + "\n" +
+               "Thrid Score: " + this.thirdPosition + "\n";
+    }
 
 }
