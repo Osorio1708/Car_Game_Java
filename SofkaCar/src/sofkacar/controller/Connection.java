@@ -2,8 +2,6 @@ package sofkacar.controller;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import sofkacar.model.Player;
 import sofkacar.model.Driver;
@@ -17,7 +15,7 @@ public class Connection {
     private String database;
     private Statement sm;
     private ResultSet rs;
-    ArrayList<Player> players;
+    private ArrayList<Player> players;
     private java.sql.Connection connection;
 
     public Connection() {
@@ -179,12 +177,12 @@ public class Connection {
     }
 
     public ArrayList<String[]> getPodium() {
-        String [] vecResult;
+        String[] vecResult;
         ArrayList<String[]> aux = new ArrayList<String[]>();
         String comand = "SELECT * FROM podium WHERE 1 ORDER BY date DESC";
         try {
             this.rs = Query(comand);
-            while(this.rs.next()){
+            while (this.rs.next()) {
                 vecResult = new String[4];
                 vecResult[0] = this.rs.getDate("date").toString();
                 vecResult[1] = this.rs.getString("firstPlace");
@@ -197,5 +195,18 @@ public class Connection {
             disconnect();
         }
         return aux;
+    }
+
+    public boolean deletePlayer(String id) {
+        String comand = "DELETE FROM player WHERE idPlayer = " + id;
+        try {
+            noQuery(comand);
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage());
+            disconnect();
+            return false;
+        }
+        disconnect();
+        return true;
     }
 }

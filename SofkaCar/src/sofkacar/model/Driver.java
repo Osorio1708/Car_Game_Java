@@ -1,15 +1,15 @@
 package sofkacar.model;
 
 public class Driver extends Player {
- 
-    Car playerCar;
+
+    private Car playerCar;
 
     public Driver(String name, String id, int firstPosition, int secondPosition, int thirdPosition) {
         super(name, id, firstPosition, secondPosition, thirdPosition);
     }
-    
-    public Driver(String name, String id, Car playerCar){
-        super(name,id);
+
+    public Driver(String name, String id, Car playerCar) {
+        super(name, id);
         this.playerCar = playerCar;
     }
 
@@ -20,5 +20,5 @@ public class Driver extends Player {
     public void setPlayerCar(Car playerCar) {
         this.playerCar = playerCar;
     }
-    
+
 }

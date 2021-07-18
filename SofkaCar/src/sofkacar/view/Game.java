@@ -149,7 +149,7 @@ public class Game extends javax.swing.JPanel {
             tblGame.setModel(gm.updateTableGame());
             tblPodium.setModel(gm.updateTablePodium());
         }else{
-            gm.message("El Juego termino");
+            gm.message("Game Over");
             btnEndGame.setEnabled(true);
         }
         

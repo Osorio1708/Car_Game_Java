@@ -1,19 +1,17 @@
-
 package sofkacar.model;
 
-
 public class Car {
-    
+
     private int totalRoute;
     private int actualPosition;
     private int laneNumber;
-    
-    public Car(int totalRoute,int laneNumber){
+
+    public Car(int totalRoute, int laneNumber) {
         this.laneNumber = laneNumber;
         this.totalRoute = totalRoute;
         this.actualPosition = 0;
     }
-    
+
     public Car(int totalRoute, int actualPosition, int laneNumber) {
         this.totalRoute = totalRoute;
         this.actualPosition = actualPosition;
@@ -44,5 +42,4 @@ public class Car {
         this.laneNumber = laneNumber;
     }
 
-    
 }

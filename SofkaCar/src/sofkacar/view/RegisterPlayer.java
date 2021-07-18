@@ -1,19 +1,16 @@
 
 package sofkacar.view;
-import java.util.ArrayList;
-import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
-import sofkacar.model.Player;
-import sofkacar.model.Query;
+import sofkacar.model.RegisterPlayerModel;
 
 public class RegisterPlayer extends javax.swing.JPanel {
 
-    Player player;
+   RegisterPlayerModel rpm;
     
     public RegisterPlayer() {
         initComponents();
         setSize(730,500);
-        updateTableRegister();
+        rpm = new RegisterPlayerModel();
+        tblRegisterPlayer.setModel(rpm.updateTableRegister());
     }
 
     @SuppressWarnings("unchecked")
@@ -133,59 +130,25 @@ public class RegisterPlayer extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
-        String id = "";
-        String name = "";
-        try{
-            id = txtIdPlayer.getText();
-            name = txtNamePlayer.getText();
-            Integer.parseInt(id);
-            if(id.length() == 4 && !name.equalsIgnoreCase("")){
-            player = new Player(name,id);
-                if(player.insertUser()){
-                    JOptionPane.showMessageDialog(null,"Usuario Guardado con exito");
-                }else{
-                    JOptionPane.showMessageDialog(null, "Usuario no guardado");
-                }
-            }else{
-                JOptionPane.showMessageDialog(null,"Ingresar un numero de 4 digitos");
-                JOptionPane.showMessageDialog(null,"Ingresa un nombre que almenos tenga 1 caracter");
-            }
-        }catch(Exception e){
-            JOptionPane.showMessageDialog(null, "Solo se pueden ingresar numeros en el campo Id");
-        }
+        rpm.registerPlayer(txtIdPlayer.getText(),txtNamePlayer.getText());
+        tblRegisterPlayer.setModel(rpm.updateTableRegister());
         cleanTxt();
-        updateTableRegister();
     }//GEN-LAST:event_btnRegisterActionPerformed
 
     private void txtNamePlayerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamePlayerActionPerformed
+      
        
     }//GEN-LAST:event_txtNamePlayerActionPerformed
 
     private void txtIdPlayerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdPlayerActionPerformed
-        JOptionPane.showMessageDialog(null,"Ingrese un codigo de 4 digitos");
+       
     }//GEN-LAST:event_txtIdPlayerActionPerformed
 
     public void cleanTxt(){
         txtIdPlayer.setText("");
         txtNamePlayer.setText("");
     }
-    private  void updateTableRegister(){
-        ArrayList<Player> aPlayers;
-           Object mPlayers[][];
-           Query td = new Query();
-           String[] nameColumns = {"Id Player", "Name Player", "First Position", "Second Position", "Third Position"};
-           aPlayers = td.filTablePlayers();
-           mPlayers = new Object[aPlayers.size()][5];
-           for (int i = 0; i < aPlayers.size(); i++){
-               mPlayers[i][0] = aPlayers.get(i).getId();
-               mPlayers[i][1] = aPlayers.get(i).getName();
-               mPlayers[i][2] = aPlayers.get(i).getFirstPosition();
-               mPlayers[i][3] = aPlayers.get(i).getSecondPosition();
-               mPlayers[i][4] = aPlayers.get(i).getThirdPosition();
-           }
-           DefaultTableModel tm = new DefaultTableModel(mPlayers,nameColumns);
-           tblRegisterPlayer.setModel(tm);
-    }
+
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRegister;

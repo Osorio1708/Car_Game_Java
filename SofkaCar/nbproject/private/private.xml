@@ -4,10 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Santiago%20Osorio/Documents/NetBeansProjects/SofkaCar/src/sofkacar/view/Podium.java</file>
-            <file>file:/C:/Users/Santiago%20Osorio/Documents/NetBeansProjects/SofkaCar/src/sofkacar/model/PodiumModel.java</file>
+            <file>file:/C:/Users/Santiago%20Osorio/Documents/NetBeansProjects/SofkaCar/src/sofkacar/view/RegisterPlayer.java</file>
             <file>file:/C:/Users/Santiago%20Osorio/Documents/NetBeansProjects/SofkaCar/src/sofkacar/view/Game.java</file>
-            <file>file:/C:/Users/Santiago%20Osorio/Documents/NetBeansProjects/SofkaCar/src/sofkacar/model/Query.java</file>
-            <file>file:/C:/Users/Santiago%20Osorio/Documents/NetBeansProjects/SofkaCar/src/sofkacar/controller/Connection.java</file>
+            <file>file:/C:/Users/Santiago%20Osorio/Documents/NetBeansProjects/SofkaCar/src/sofkacar/view/Main.java</file>
+            <file>file:/C:/Users/Santiago%20Osorio/Documents/NetBeansProjects/SofkaCar/src/sofkacar/view/RemovePlayer.java</file>
             <file>file:/C:/Users/Santiago%20Osorio/Documents/NetBeansProjects/SofkaCar/src/sofkacar/model/GameModel.java</file>
         </group>
     </open-files>

@@ -1,15 +1,13 @@
-
 package sofkacar.model;
-import sofkacar.controller.Connection;
 
 public class Player {
-    String name;
-    String id;
-    int firstPosition;
-    int secondPosition;
-    int thirdPosition;
-    Connection con;
-    
+
+    protected String name;
+    protected String id;
+    protected int firstPosition;
+    protected int secondPosition;
+    protected int thirdPosition;
+
     public Player(String name, String id) {
         this.name = name;
         this.id = id;
@@ -62,10 +60,5 @@ public class Player {
     public void setThirdPosition(int thirdPosition) {
         this.thirdPosition = thirdPosition;
     }
-    
-    public boolean insertUser(){
-        con = new Connection();
-        return con.insertPlayer(this.id,this.name);
-    }
-    
+
 }
